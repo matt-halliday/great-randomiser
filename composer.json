@@ -1,0 +1,12 @@
+{
+    "name": "matt/great-randomizer",
+    "authors": [
+        {
+            "name": "matt-halliday",
+            "email": "bathalliday@gmail.com"
+        }
+    ],
+    "require": {
+        "phplucidframe/console-table": "^1.2"
+    }
+}

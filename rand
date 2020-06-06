@@ -1,0 +1,51 @@
+#!/usr/bin/php
+<?php
+require './vendor/autoload.php';
+use LucidFrame\Console\ConsoleTable;
+
+/**
+ * @var $data
+ * Plain text list of pipe separated songs e.g:
+ * Matt|Fuck Tha Police, NWA
+ * Sarah|Sound Of Da Police, KRS-One
+ */
+$data = trim(file_get_contents('./data.txt'));
+
+$suggestions = array_map(function ($line) {
+    list($name, $title) = array_map('trim', explode('|', $line));
+    return [
+        'title' => $title,
+        'giver' => $name
+    ];
+}, explode(PHP_EOL, $data));
+
+$people = array_map(function ($suggestion) { return $suggestion['giver']; }, $suggestions);
+shuffle($people);
+
+$result = array_combine($people, $suggestions);
+uksort($result, function() { return rand() > getrandmax() / 2; });
+
+$table = (new ConsoleTable())
+    ->setHeaders([
+        '#',
+        'Suggestion',
+        'Giver',
+        'Taker'
+    ]);
+
+$i = 1;
+foreach ($result as $taker => $song) {
+    $table->addRow([
+        $i++,
+        $song['title'],
+        $song['giver'],
+        $taker
+    ]);
+}
+
+$width = strlen(explode(PHP_EOL, $table->getTable())[0]);
+echo '+' . str_repeat('-', $width - 2) . '+' . PHP_EOL;
+$title = str_pad('Covered In Flies Round 2', $width - 2, ' ', STR_PAD_BOTH);
+echo '|' . "\033[32m" . $title . "\033[37m", '|' . PHP_EOL;
+
+$table->display();
