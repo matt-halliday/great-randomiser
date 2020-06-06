@@ -17,7 +17,7 @@ You:
 
 ## How To Use
 
-Organise yer pals. Put the names of the suggesters, along with their suggestion in `data.txt` in the following format:
+Organise yer pals. Clone this repo into a directory on your machine and head in there using your terminal. Put the names of the suggesters, along with their suggestion in `data.txt` in the following format:
 
 ```text
 Paul|Are You Lonely Tonight, Elvis Presley
@@ -33,4 +33,4 @@ Run `./rand` in your terminal.
 
 ## Known Issues
 
-Depending on the number of suggestions, there's a chance that suggestions will be assigned to the person who suggested the song. I just run it again. Can't be bothered to add more logic to fix this.
+There's a chance a suggestion will be assigned to the person who suggested it. Just run it again. Can't be bothered to add more logic to fix this. I call that *the secret sauce*.
