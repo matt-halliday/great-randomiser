@@ -12,7 +12,7 @@ We take a little under two weeks per round to produce our track and then have a 
 
 You:
 - [x] Are running in a shell environment (Linux/Mac Terminal/Windows Powershell)
-- [x] Have PHP CLI version v7 or above
+- [x] Have PHP CLI version 7.1 or above
 - [x] Have [composer](https://getcomposer.org/) installed
 
 ## How To Use
