@@ -4,9 +4,9 @@
 
 We have a covers group during COVID 19 lockdown.
 Each person in the group submits a song suggestion that they would like to hear covered.
-The folks who submitted each get a song to cover in return.
+The folks who submitted, each get a song to cover in return.
 
-We take a little under two weeks per round to produce our track and then have a listening party via Zoom to have some beers and listen to each other's masterpieces.
+We take a little under two weeks per round to produce our track and then have a listening party via Zoom to have some beers and appreciate all the masterpieces.
 
 ## Prerequisites
 
