@@ -30,7 +30,3 @@ Install the dependencies via `composer install`.
 Run `./rand` in your terminal.
 
 #### That's all folks.
-
-## Known Issues
-
-There's a chance a suggestion will be assigned to the person who suggested it. Just run it again. Can't be bothered to add more logic to fix this. I call that *the secret sauce*.

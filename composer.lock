@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ee1fc7ae681859edf480b9691ffd5679",
+    "content-hash": "cfd8cf47cee675859d09eebe453845d2",
     "packages": [
         {
             "name": "phplucidframe/console-table",
@@ -44,6 +44,10 @@
                 }
             ],
             "description": "Console Table",
+            "support": {
+                "issues": "https://github.com/phplucidframe/console-table/issues",
+                "source": "https://github.com/phplucidframe/console-table/tree/v1.2.4"
+            },
             "time": "2019-03-03T12:17:32+00:00"
         }
     ],
@@ -53,7 +57,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^7.1"
+    },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

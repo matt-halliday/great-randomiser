@@ -7,6 +7,7 @@
         }
     ],
     "require": {
+        "php" : "^7.1",
         "phplucidframe/console-table": "^1.2"
     }
 }

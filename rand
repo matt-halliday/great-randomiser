@@ -16,8 +16,10 @@ foreach (getResults($data) as $taker => $suggestion) {
     $table->addRow([$rowNum++, $suggestion['title'], $suggestion['giver'], $taker]);
 }
 
+echo PHP_EOL;
 addHeader($table);
 $table->display();
+echo PHP_EOL;
 
 /**
  * @param string $data
@@ -28,8 +30,24 @@ function getResults(string $data): array {
     $people = getPeople($suggestions);
     $results = array_combine($people, $suggestions);
     uksort($results, function() { return rand() > getrandmax() / 2; });
+    if (!hasSecretSauce($results)) {
+        return $results;
+    }
+    return getResults($data);
+}
 
-    return $results;
+/**
+ * @param string $data
+ * @return bool
+ */
+function hasSecretSauce(array $results): bool
+{
+    foreach ($results as $taker => $suggestion) {
+        if ($suggestion['giver'] === $taker) {
+            return true;
+        }
+    }
+    return false;
 }
 
 /**
