@@ -37,11 +37,10 @@ function getResults(string $data): array {
 }
 
 /**
- * @param string $data
+ * @param array $results
  * @return bool
  */
-function hasSecretSauce(array $results): bool
-{
+function hasSecretSauce(array $results): bool {
     foreach ($results as $taker => $suggestion) {
         if ($suggestion['giver'] === $taker) {
             return true;
@@ -66,14 +65,15 @@ function getSuggestions(string $data): array {
  * @return array
  */
 function getPeople(array $suggestions): array {
-    $people = array_map(function ($suggestion) { return $suggestion['giver']; }, $suggestions);
+    $people = array_map(function ($suggestion) {
+        return $suggestion['giver'];
+    }, $suggestions);
     shuffle($people);
     return $people;
 }
 
 /**
  * @param ConsoleTable $table
- * @param string $title
  */
 function addHeader(ConsoleTable $table): void {
     $width = strlen(trim(explode(PHP_EOL, $table->getTable())[0]));
