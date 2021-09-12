@@ -22,7 +22,7 @@ This changes a lot, people keep adding new rules, at the moment they are somethi
 * Submit your song by email to our benevolent dictator on the day of the listening party. A link to a Dropbox  or something for your wav, aiff whatever 
 * If you don't finish your song it goes in the chum bucket
 * If you finish your song early you can take another from the chum bucket
-* If you really can't dig your sing you can put it in the chum bucket and take another out
+* If you really can't dig your song you can put it in the chum bucket and take another out one week after the draw
 * Getting a song from the chum bucket...
   * Ask our benevolent dictator Matt who will give you a number
   * Chose a number between 1 and the number Matt gave you
